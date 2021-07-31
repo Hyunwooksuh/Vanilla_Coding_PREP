@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){  
+                let answer;
+                let middle;
+                //1.홀수
+                if (s.length%2==1) {
+                    answer=s[(s.length-1)/2];
+                } else {
+                    answer=s[Math.floor((s.length-1)/2)]+s[Math.ceil((s.length-1)/2)];
+                }
+                return answer;
+            }
+            console.log(solution("good"));
+        </script>
+    </body>
+</html>

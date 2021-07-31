@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){  
+                let answer=[];
+                for (let i=0; i<s.length; i++) {
+                    if (isExist(s[i])==1) continue;
+                    answer.push(s[i]);
+                }
+                function isExist(char) {
+                    for (let j=0; j<answer.length; j++) {
+                        if (answer[j]===char) return 1;
+                    }
+                    return 0;
+                }
+
+                return answer;
+            }
+            let str=["good", "time", "good", "time", "student"];
+            console.log(solution(str));
+        </script>
+    </body>
+</html>

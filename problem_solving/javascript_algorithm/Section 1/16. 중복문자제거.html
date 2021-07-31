@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){  
+                let answer="";
+                let bucket=[];
+                for (let i=0; i<=s.length-1; i++) {
+                    if (isExist(s[i])==1) continue;
+                    answer+=s[i];
+                }
+                function isExist(char) {
+                    for (let j=0; j<answer.length; j++) {
+                        if (answer[j]===char) return 1;
+                    }
+                    return 0;
+                }
+                return answer;
+            }
+
+            console.log(solution("ksekkset"));
+        </script>
+    </body>
+</html>
