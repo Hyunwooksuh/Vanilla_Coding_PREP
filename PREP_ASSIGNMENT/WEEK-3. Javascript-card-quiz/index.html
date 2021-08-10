@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Vanilla Coding | Bootcamp Prep</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link href="./styles/index.css" rel="stylesheet" />
+</head>
+
+<body>
+  <img class="main-logo" src="./images/vc.png" alt="Vanilla Coding Logo" />
+  <section class="front-page">
+    <div class="front-page image">
+      <img src="images/students.jpg">
+    </div>
+    <div class="content">
+      <h1>JavaScript Card Quiz</h1>
+      <p>
+        The test contains 21 questions.<br>
+        It's just a nice way to see how much you know, or don't<br>
+        know, about JavaScript. You will get 1 point for each <br>
+        correct answer.<br>
+        At the end of the Quiz, your total score will be displayed<br>
+        Maximum score is 21 points.
+      </p>
+      <div class="start-button">
+        <button id="start-button">START QUIZ</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="quiz-page">
+    <div class="quiz-title"></div>
+    <section class="quiz-status">
+      <div class="answer-gotten"></div>
+      <div class="answer-remaining"></div>
+      <div class="remaining-seconds">Time Limit : 5</div>
+    </section>
+    <section class="sample-code">
+      <div></div>
+    </section>
+    <table class="quiz-choice">
+      <!-- <tr>
+        <td class="index index1">A</td>
+        <td class="index index2">Acontent</td>
+      </tr>
+      <tr>
+        <td class="index index1">B</td>
+        <td class="index index2">Bcontent</td>
+      </tr> -->
+    </tr>
+    </table class="bottom-buttons">
+    <button class="next-quiz" id="next-quiz">NEXT QUIZ</button>
+    <button class="restart-button" id="restart-button">RESTART QUIZ</button>
+  </div>
+
+  <script src="./app/index.js"></script>
+
+</body>
+
+</html>

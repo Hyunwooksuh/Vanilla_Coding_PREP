@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vanilla Coding | Bootcamp Prep</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="./styles/index.css" rel="stylesheet" />
+</head>
+<body>
+  <img class="main-logo" src="./images/vc.png" alt="Vanilla Coding Logo" />
+  <h1>Tick Tack Toe</h1>
+
+  <section>
+    <div class="turn-sign">
+      <span class="turn X-turn">X</span>
+      <span class="turn O-turn">O</span>
+      <span class="present-turn">TURN</span>
+    </div>
+
+    <div class="board">
+      <!-- This is your board.. You can change if you want -->
+      <span class="item item1" id="0"></span>
+      <span class="item item2" id="1"></span>
+      <span class="item item3" id="2"></span>
+      <span class="item item4" id="3"></span>
+      <span class="item item5" id="4"></span>
+      <span class="item item6" id="5"></span>
+      <span class="item item7" id="6"></span>
+      <span class="item item8" id="7"></span>
+      <span class="item item9" id="8"></span>
+    </div>
+  </section>
+
+    <form class="button">
+      <button class="start-button">GAME START</button>
+      <button class="restart-button" hidden>RESTART GAME</button>
+    </form>
+
+  <script src="./app/index.js"></script>
+
+</body>
+</html>
