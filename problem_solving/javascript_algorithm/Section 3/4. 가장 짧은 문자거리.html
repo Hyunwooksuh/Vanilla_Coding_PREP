@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s, t){
+                let answer=[];
+                let index=[];
+                for (let i = 0; i<s.length; i++) {
+                    if (s[i]===t) index.push(i);
+                }
+                let min = Number.MAX_SAFE_INTEGER;
+                for (let i = 0; i<s.length; i++) {
+                    min = Number.MAX_SAFE_INTEGER;
+                    for (let j = 0; j<index.length; j++) {
+                         let substract = i-index[j];
+                         if (substract < 0) substract = -substract;
+                         if (min>substract) min = substract;   
+                    }   
+                    answer.push(min);
+                }
+
+                return answer;
+            }
+            
+            let str="teachermode";
+            console.log(solution(str, 'e'));
+        </script>
+    </body>
+</html>

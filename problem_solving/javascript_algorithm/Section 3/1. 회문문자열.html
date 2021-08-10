@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                let answer="";
+                let forwardS= s.toUpperCase();
+                let backwardS = "";
+                let tail = 0;
+                for (let i = s.length-1; i>=0; i--) {
+                    backwardS += forwardS[i]; 
+                }
+                if (forwardS === backwardS) answer="YES";
+                else answer="NO";
+
+                return answer;
+            }
+            
+            let str="gooG";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
+
+
+

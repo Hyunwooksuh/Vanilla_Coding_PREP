@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr){  
+                let answer;
+                let maxSum=0;
+                let sum = 0;
+                let diagonal = 0; let reversedDiagonal = 0;
+                for (let i = 0; i < arr.length; i++) {
+                    diagonal += arr[i][i];
+                }
+                if (diagonal > maxSum) maxSum = diagonal;
+                for (let i = 0; i < arr.length; i++) {
+                    reversedDiagonal += arr[arr.length-1-i][i];
+                }
+                if (reversedDiagonal > maxSum) maxSum = diagonal;
+                
+                for (i = 0; i<arr.length; i++) {
+                    sum = 0;
+                    for (let j = 0; j<arr.length; j++) {
+                        sum += arr[i][j];
+                    }
+                    if (sum > maxSum) maxSum = sum;
+                }
+
+                for (j = 0; j<arr.length; j++) {
+                    sum = 0;
+                    for (i = 0; i<arr.length; i++) {
+                        sum += arr[i][j];
+                    }
+                    if (sum > maxSum) maxSum = sum;
+                }
+                answer=maxSum;
+                return answer;
+            }
+
+            let arr=[[10, 13, 10, 12, 15], 
+                     [12, 39, 30, 23, 11],
+                     [11, 25, 50, 53, 15],
+                     [19, 27, 29, 37, 27],
+                     [19, 13, 30, 13, 19]];
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>

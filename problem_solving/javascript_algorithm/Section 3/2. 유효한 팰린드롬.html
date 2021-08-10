@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                let answer="YES";
+                s=s.toLowerCase().replace(/[^a-z]/g, '');
+                if (s.split('').reverse().join('') !== s) return "NO";
+                //문자열을 배열로 만듬(여기서는 char 단위로)
+                return answer;
+            }
+            
+            let str="found7, tume: study; Yduts; emit, 7Dnuof";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
