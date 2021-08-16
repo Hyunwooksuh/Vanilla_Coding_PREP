@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function isPrime(number) {
+                if (number === 1) return false;
+                for (let i = 2; i<number/2; i++) {
+                    if (number % i === 0) return false;
+                }
+                return true;
+            }
+            function solution(arr){
+                let answer=[];
+                for (let x of arr) {
+                    let reversed=0;
+                    while(x) {
+                        let t = x%10;
+                        reversed=reversed*10+t;
+                        x=parseInt(x/10);
+                    }
+                    if(isPrime(reversed)===true) answer.push(reversed);
+                }
+                return answer;
+            }
+            
+            let arr=[32, 55, 62, 20, 250, 370, 200, 30, 100];
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>

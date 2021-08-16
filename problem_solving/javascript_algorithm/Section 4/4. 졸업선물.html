@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(m, product){
+                let answer;
+                let n=product.length;
+                let realPriceSum = [];
+                let disPriceSum = [];
+                
+                for (let i=0; i<n; i++) {
+                    realPriceSum.push(product[i][0] + product[i][1]);
+                    disPriceSum.push(product[i][0]/2 + product[i][1]);
+                }
+                realPriceSum.sort(function(a,b) {
+                    return a-b;
+                })
+                disPriceSum.sort(function(a,b) {
+                    return a-b;
+                })
+
+                let max = 0;
+                for (let j = 0; j<=4; j++) {
+                    let sum = disPriceSum[j];
+                    for (let k = 0; k<=j-1; k++) {
+                        sum += realPriceSum[k];
+                    }
+                    if (sum <= 28) {
+                        max = j+1;
+                    }       
+                    if (sum > 28) {
+                        return max;
+                        
+                    }
+                }
+            }
+            
+            let arr=[[6, 6], [2, 2], [4, 3], [4, 5], [10, 3]];
+            console.log(solution(28, arr));
+        </script>
+    </body>
+</html>
