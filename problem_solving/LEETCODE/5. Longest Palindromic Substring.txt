@@ -1,0 +1,68 @@
+Q. Given a string s, return the longest palindromic substring in s.
+------------------------------------------------------------------------------------
+A1. Sliding Window solution 
+var longestPalindrome = function(s) {
+    
+    let eachLengthStr = s[0];
+    let LongestStr = eachLengthStr;
+    
+    function isPal(str) {
+        const reversedStr = str.split('').reverse().join('');
+        if (reversedStr === str) return 1;
+        return 0;
+    }
+    
+    
+    for (let i = 2; i<=s.length; i++) {
+        
+            for (let k = 0; k <= s.length - i; k++) {
+                 let start = k;
+                 let end = start + i;
+                 eachLengthStr = s.slice(start,end);
+                 let result = isPal(eachLengthStr);
+                 if (result === 1) {
+                    if (eachLengthStr.length > LongestStr.length) LongestStr = eachLengthStr;
+                 }
+    
+            }
+         
+     }
+     return LongestStr;
+
+    
+};
+------------------------------------------------------------------------------------
+A2. (Wrong Answer : brute force time exceeding error)
+var longestPalindrome = function(s) {
+    
+    let eachLengthStr = s[0];
+    let LongestStr = eachLengthStr;
+    
+    function isPal(str) {
+        const reversedStr = str.split('').reverse().join('');
+        if (reversedStr === str) return 1;
+        return 0;
+    }
+    
+    
+    for (let i = 2; i<=s.length; i++) {
+        
+            for (let k = 0; k <= s.length - i; k++) {
+                 let start = k;
+                 let end = start + i;
+                 eachLengthStr = s.slice(start,end);
+                 let result = isPal(eachLengthStr);
+                 if (result === 1) {
+                    if (eachLengthStr.length > LongestStr.length) LongestStr = eachLengthStr;
+                 }
+    
+            }
+         
+     }
+     return LongestStr;
+
+    
+};
+
+
+08/13/2021 16:40	Accepted	307 ms	45.1 MB	javascript
