@@ -1,0 +1,33 @@
+Q. Given an input string s, reverse the order of the words.
+A word is defined as a sequence of non-space characters. The words in s will be separated by at least one space.
+Return a string of the words in reverse order concatenated by a single space.
+Note that s may contain leading or trailing spaces or multiple spaces 
+between two words. The returned string should only have a single space separating the words. 
+Do not include any extra spaces.
+
+A. -----------------------------------------------------------------------------------------
+var reverseWords = function(s) {
+    s = " " + s + " ";
+    let output = [];
+    let count = 0;
+    let t = s.length-1;
+    let start, end;
+    
+    while(t>=0) {
+        if (count % 2 === 0 && s[t] !== " "){
+            end = t+1;
+            count++;
+        } else if (count % 2 === 1 && s[t] === " ") {
+            start = t+1;
+            let temp = s.slice(start, end);
+            output.push(temp);
+            count++;
+        }
+        t--;  
+    }
+    output = output.join(" ");
+    return output;
+};
+
+
+08/22/2021 14:23	Accepted	64 ms	40.3 MB	javascript
