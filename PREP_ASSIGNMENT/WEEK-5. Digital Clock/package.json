@@ -1,0 +1,14 @@
+{
+  "name": "canola-ui",
+  "version": "1.0.0",
+  "description": "Canola UI - Object Oriented View Library",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "keywords": [],
+  "author": "Ken Huh <ken@vanillacoding.co>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
