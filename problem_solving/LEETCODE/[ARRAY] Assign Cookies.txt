@@ -1,0 +1,15 @@
+var findContentChildren = function(g, s) {
+    g = g.sort(function(a,b) {return a-b;});
+    s = s.sort(function(a,b) {return a-b;});
+    let count = 0;
+    while(g.length !== 0) {
+        if (s[s.length-1] >= g[g.length-1]) {
+            g.pop();
+            s.pop();
+            count ++;
+        } else g.pop();
+    }
+    return count;  
+};
+
+08/29/2021 16:15	Accepted	96 ms	41.4 MB	javascript
