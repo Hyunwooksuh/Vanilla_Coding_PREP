@@ -1,0 +1,66 @@
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+main > h1 {
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  text-align: center;
+  font-size: 4em;
+  margin: 0;
+}
+
+main > p {
+  text-align: center;
+  margin: 1em 0 2em;
+  font-weight: 300;
+}
+
+.main-logo {
+  display: block;
+  width: 200px;
+  margin: 0 auto 2em;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.clock {
+  text-align: center;
+  margin: 1em;
+  padding: 2em 1em;
+  border: 1px solid black;
+  border-radius: 2px;
+  width: 50%;
+}
+
+.clock-title {
+  display: flex;
+  justify-content: space-evenly;
+  justify-items: center;
+}
+
+.clock h3 {
+  font-size: 1em;
+  font-weight: 300;
+  margin: 0;
+}
+
+.clock p {
+  font-size: 2em;
+  font-weight: 300;
+  margin: 1em 0 0;
+}
+
+
+/*# sourceMappingURL=/styles.6145e9cd.css.map */
